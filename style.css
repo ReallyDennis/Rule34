@@ -1,0 +1,510 @@
+/* ==UserStyle==
+@name           Desktop rule34
+@namespace      Dennis
+@version        1.0.0
+@description    A desktop focussed redesign of rule34.xxx, based on 'Mordern Rule34'
+@author         Dennis
+==/UserStyle== */
+@-moz-document domain("rule34.xxx") {
+
+    * {
+        font-family: "Poppins", sans-serif !important;
+        outline: none;
+    }
+
+    body {
+        overflow-x: hidden;
+        max-width: 100%;
+        background: #212121;
+        color: #aaa;
+    }
+
+    #site-title, #subnavbar, h5 {
+        display: none;
+    }
+
+    a, a:link, a:visited {
+        color: #88b783;
+    }
+
+    .tag-type-metadata>a:hover, .tag-type-character>a:hover, .tag-type-copyright>a:hover, .tag-type-artist>a:hover {
+        color: #fff;
+    }
+
+    .tag-count {
+        color: #aaa;
+    }
+
+    /* Header */
+    #header {
+        display: flex;
+        position: fixed;
+        align-items: center;
+        width: 100%;
+        height: 70px;
+        background: #181818;
+        z-index: 1000;
+    }
+
+    #header a {
+        padding: 8px 12px;
+        border-radius: 7px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #aaa;
+    }
+
+    #navbar li a:hover {
+        background: rgba(136, 183, 131, 0.2);
+        color: #88b783;
+    }
+
+    #navbar li.current-page {
+        background: transparent !important;
+    }
+
+    #navbar li.current-page a {
+        background: rgba(136, 183, 131, 0.2);
+        color: #88b783 !important;
+    }
+
+    #navbar li:first-child a {
+        position: absolute;
+        padding: 8px 16px;
+        right: 2vw;
+        top: 17px;
+        border: 1px solid #aaa;
+        border-radius: 7px;
+    }
+
+    #navbar li:first-child a:hover {
+        background: transparent;
+        color: #fff;
+        border-color: #fff;
+    }
+
+    #navbar li:nth-child(1) {
+        margin: 0 40px 0 0 !important;
+    }
+
+    #navbar li:nth-child(10), #navbar li:nth-child(11), #navbar li:nth-child(12), #navbar li:nth-child(14) {
+        display: none;
+    }
+
+    /* Page selector */
+    div#paginator a, div#paginator b {
+        margin: 0 3px 5px 3px;
+        padding: 12px 18px;
+        border: none;
+        border-radius: 50px;
+        color: #aaa;
+    }
+
+    div#paginator a:hover, div#paginator b {
+        background: rgba(136, 183, 131, 0.2);
+        color: #88b783;
+    }
+
+    div#content, div[style="margin-left: 20px;"], div[style="margin-left: 10px; margin-top: 10px; width: 98%; height: 98%"] {
+        padding: 100px 120px 0px 120px;
+    }
+
+    .manual-page-chooser>input[type=text], div#paginator input[type=submit] {
+        display: none;
+    }
+
+    /* Autocomplete */
+    .awesomplete ul {
+        display: block;
+        padding: 8px;
+        border: 2px solid #181818;
+        border-radius: 12px;
+        font-size: 14px;
+        background: #212121;
+    }
+
+    .awesomplete li {
+        padding: 6px 8px;
+        color: #aaa;
+    }
+
+    .awesomplete ul li:hover {
+        background: #181818;
+        color: #fff;
+    }
+
+    .awesomplete ul li mark {
+        background: #3d3d3d;
+        color: #88b783;
+    }
+
+    /* Inputs */
+    input[type=submit], input[type=button], button {
+        margin: 10px;
+        padding: 8px 36px;
+        border: 2px solid #88b783;
+        border-radius: 50px;
+        background: #88b783;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, button:hover {
+        background: transparent;
+        color: #88b783;
+    }
+
+    input[type=submit]:active, input[type=button]:active, button:active, input[type=submit]:not([disabled]):active, input[type=button]:not([disabled]):active, button:not([disabled]):active {
+        filter: none;
+        background: #aaa;
+        color: #181818;
+        border-color: #aaa;
+    }
+
+    input[type=text], input[type=password], input[type=email], textarea, select {
+        padding: 10px;
+        width: 500px;
+        margin: 10px;
+        border-radius: 5px;
+        background: #212121 !important;
+        color: #c0c0c0;
+        border: 1px solid #505a50;
+    }
+
+    /* Main page */
+    #static-index>#links>a {
+        padding: 8px 12px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    #static-index>#links>a:hover {
+        background: rgba(136, 183, 131, 0.2);
+    }
+}
+
+@-moz-document url-prefix("https://rule34.xxx/index.php?page=post&s=list") {
+
+    .content {
+        position: absolute;
+        top: 150px;
+        left: 6vw;
+        width: 90%;
+    }
+
+    /* Search bar */
+    div.tag-search {
+        position: absolute;
+        top: 100px;
+        left: 25vw;
+        width: 50vw;
+    }
+
+    div.tag-search input[type=text] {
+        padding: 13px;
+        border: 1px solid #88b783;
+        border-radius: 50px;
+        color: #aaa;
+        background: transparent;
+    }
+
+    div.tag-search input[type=text]:focus {
+        border-color: #fff;
+    }
+
+    [src="//rule34.xxx/images/r34chibi.png"], [id="tag-sidebar"], div.tag-search input[type=submit] {
+        display: none;
+    }
+}
+
+@-moz-document url-prefix("https://rule34.xxx/index.php?page=post&s=view") {
+
+    .content {
+        margin-top: 1rem;
+    }
+
+    /* Media */
+    img, .fluid_video_wrapper {
+        max-height: 70vh;
+        max-width: 40vw;
+        height: auto;
+        width: auto;
+    }
+
+    /* Comments */
+    #post-comments {
+        position: absolute;
+        width: 50vw;
+        top: 20vh;
+        right: 5vw;
+    }
+
+    #comment-list>div {
+        border-bottom: 1px solid #181818;
+    }
+
+    #comment-list>div>hr {
+        display: none;
+    }
+
+    #comment-list>div>div.col2 {
+        margin: 12px 0;
+    }
+
+    /* Sidebar */
+    .tag-search {
+        display: none;
+    }
+
+    [id="tag-sidebar"] {
+        display: initial;
+        position: absolute;
+        padding: 30px 16px 140px 16px;
+        border-radius: 0 0 7px;
+        width: auto;
+        z-index: 10;
+        top: 70px;
+        left: -1000px;
+        background: #181818;
+        transition: 0.5s;
+    }
+
+    .sidebar li a:hover {
+        color: #fff;
+    }
+
+    .sidebar li a:first-child {
+        display: none;
+    }
+
+    [id="long-notice"] {
+        position: fixed;
+        z-index: 1000;
+    }
+
+    [id="long-notice"]::before {
+        display: initial;
+        position: fixed;
+        top: 27px;
+        left: 1.5vw;
+        padding: 10px;
+        background: url(https://raw.githubusercontent.com/ReallyDennis/Rule34/0a3cd0a9506f1e8ba839f642081acd2d6258b5cc/Hamburger.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        content: "";
+        cursor: pointer;
+    }
+
+    [id="long-notice"]:hover~#content [id="tag-sidebar"], [id="tag-sidebar"]:hover {
+        left: 0px;
+    }
+
+    .sidebar li a {
+        font-size: 14px;
+    }
+
+    /* Toolbar */
+    .sidebar div:nth-last-child(3) a[style="font-weight: bold;"], .image-sublinks a:first-child, .image-sublinks a:last-child {
+        position: absolute;
+        width: auto;
+        top: 18.5vh;
+    }
+    
+    .sidebar div:nth-last-child(3) li:last-child {
+        position: absolute;
+        top: 18.3vh;
+    }
+
+    div.sidebar div:nth-last-child(3) li:last-child {
+        right: 12vw;
+        scale: 125%;
+        margin-top: 2rem;
+    }
+
+    div.sidebar div:nth-last-child(3) li:last-child a {
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        padding: 10px;
+        scale: 80%;
+        margin-top: -0.125vh;
+        background: url('https://raw.githubusercontent.com/ReallyDennis/Rule34/0a3cd0a9506f1e8ba839f642081acd2d6258b5cc/Heart.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: transparent;
+    }
+
+    /* Original edit and comment text */
+    [class="image-sublinks"] a:first-child, [class="image-sublinks"] a:last-child {
+        display: inline-block;
+        padding: 10px;
+        color: transparent;
+    }
+
+    /* Edit button */
+    [class="image-sublinks"] a:first-child {
+        right: 15vw;
+        margin-right: 19px;
+        padding: 10px;
+        background: url('https://raw.githubusercontent.com/ReallyDennis/Rule34/0a3cd0a9506f1e8ba839f642081acd2d6258b5cc/Edit.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    /* Comment button */
+    [class="image-sublinks"] a:last-child {
+        right: 14vw;
+        background: url('https://raw.githubusercontent.com/ReallyDennis/Rule34/0a3cd0a9506f1e8ba839f642081acd2d6258b5cc/Comment.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    /* Share button */
+    [id="stats"] li:nth-child(4) a:first-child {
+        display: inline-block;
+        position: absolute;
+        top: 18.6vh;
+        right: 18vw;
+        font-size: 0;
+    }
+
+    [id="stats"] li:nth-child(4) a:first-child::before {
+        display: inline-block;
+        padding: 10px;
+        background: url('https://raw.githubusercontent.com/ReallyDennis/Rule34/0a3cd0a9506f1e8ba839f642081acd2d6258b5cc/Share.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        content: "";
+        color: transparent;
+    }
+
+    #stats>ul:nth-child(2)>li:nth-child(4) {
+        font-size: 0
+    }
+
+    /* Upvotes */
+    [id="stats"] li:last-child {
+        position: absolute;
+        font-size: 0;
+        right: 5vw;
+        top: 18vh;
+    }
+
+    [id="stats"] li:last-child span {
+        color: #fff;
+        font-weight: bold;
+        font-size: 12px;
+        float: right;
+        border-radius: 0 7px 7px 0;
+        padding: 8px 10px;
+        margin-top: 0px;
+        background: #181818;
+        /* Adjust as needed */
+    }
+
+    /* Upvote button */
+    [id="stats"] li:last-child a::before {
+        content: "Upvote";
+        font-size: 12px;
+        transition: 0.2s;
+        padding: 8px 15px;
+        border-radius: 7px 0 0 7px;
+        background: #181818;
+        color: #a6a6a6;
+        font-weight: bold;
+        float: right;
+        margin-top: 0;
+    }
+
+    [id="stats"] li:last-child a:hover::before {
+        background: rgb(176, 224, 176, 0.2) !important;
+        color: rgb(176, 224, 176) !important;
+    }
+
+    /* Information */
+    [id="stats"] li:nth-child(2), [id="stats"] li:nth-child(3) {
+        position: fixed;
+        font-size: 1em;
+    }
+
+    [id="stats"] li:nth-child(2) {
+        left: 2vw;
+        bottom: 4.2rem;
+    }
+
+    [id="stats"] li:nth-child(3) {
+        left: 2vw;
+        bottom: 3rem;
+    }
+
+    #notice {
+        position: fixed;
+        width: 500px;
+        padding: 16px 28px;
+        margin-left: -250px;
+        left: 50%;
+        bottom: 2rem;
+        border-radius: 7px;
+        font-size: 14px;
+        text-align: center;
+        font-weight: initial;
+        background: #181818;
+        color: #aaa;
+    }
+
+    /* Hidden items */
+    [id="stats"] li:last-child a, [class="image-sublinks"], .sidebar div:nth-last-child(3) {
+        font-size: 0px;
+    }
+
+    #stats>ul:nth-child(2)>li:nth-child(5), #stats>ul:nth-child(2)>li:nth-child(1), .sidebar img, .sidebar :last-child ul, .sidebar div:nth-last-child(2), div.sidebar div:nth-last-child(5) {
+        display: none;
+    }
+}
+@-moz-document url-prefix("https://rule34.xxx/index.php?page=alias"), url-prefix("https://rule34.xxx/index.php?page=artist"), url-prefix("https://rule34.xxx/index.php?page=tags"), url-prefix("https://rule34.xxx/index.php?page=pool"), url-prefix("https://rule34.xxx/index.php?page=forum"), url-prefix("https://rule34.xxx/index.php?page=stats"), url-prefix("https://rule34.xxx/index.php?page=icame"), url-prefix("https://rule34.xxx/index.php?page=account&s=profile"), url-prefix("https://rule34.xxx/index.php?page=gmail"), url-prefix("https://rule34.xxx/index.php?page=account&s=tag_edits") {
+    table, table tr, table td, table th {
+        border: none !important;
+        vertical-align: middle;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin-top: 30px;
+    }
+
+    tbody label, tbody p {
+        color: #aaa;
+    }
+
+    tbody td {
+        padding: 8px;
+    }
+
+    tbody tr:hover, table.highlightable>tbody>tr:not(.tableheader):hover {
+        background-color: #3d3d3d;
+    }
+
+    tbody tr {
+        color: #aaa;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #181818;
+    }
+
+    tbody a:hover {
+        color: #fff;
+    }
+
+    .mailmessage {
+        margin: auto;
+    }
+
+    .mailbody, .quote {
+        border: none !important;
+        background: #181818 !important;
+    }
+}
